@@ -1,0 +1,5 @@
+../Core/Src/modbus.c:13:10:calculate_crc16	24	static
+../Core/Src/modbus.c:25:6:modbus_exception	16	static
+../Core/Src/modbus.c:29:9:read_1bit_registers	32	static
+../Core/Src/modbus.c:54:9:read_16bit_registers	24	static
+../Core/Src/modbus.c:73:9:modbus_transaction	24	static
