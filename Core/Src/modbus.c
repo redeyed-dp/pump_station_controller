@@ -66,7 +66,6 @@ uint8_t read_16bit_registers(uint8_t total_reg_count, uint16_t *registers) {
 		modbus_response[FIELD_BYTE_COUNT] += 2;
 		p += 2;
 	}
-	modbus_response[FIELD_BYTE_COUNT] = count << 1;
 	return modbus_response[FIELD_BYTE_COUNT] + 2;
 }
 
@@ -85,6 +84,7 @@ uint8_t modbus_transaction(uint8_t request_size) {
 
 	// Address of this device
 	modbus_response[FIELD_DEVICE_ADDRESS] = MODBUS_DEVICE_ADDRESS;
+	modbus_response[FIELD_BYTE_COUNT] = 0;
 	uint8_t response_size = 1;
 	// Request processing
 	switch(modbus_request[1]) {
